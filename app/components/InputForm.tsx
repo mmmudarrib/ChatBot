@@ -118,26 +118,7 @@ return (
           className="w-full pr-20 pl-10 focus:outline-none" 
           disabled={disabled || !chatStarted}
         />
-        <input
-          type="file"
-          id="file-upload"
-          style={{ display: 'none' }}
-          onChange={handleChatFilesUpload}
-          disabled={disabled || !chatStarted || isSending}
-          multiple
-          accept=".c,.cpp,.csv,.docx,.html,.java,.json,.md,.pdf,.pptx,.txt,.tex,image/jpeg,image/png"
-        />
-        <label 
-          htmlFor="file-upload" 
-          className={clsx(
-            "absolute inset-y-0 left-3 my-auto flex h-8 w-8 items-center justify-center rounded-md transition-all",
-            disabled || !chatStarted || isSending
-              ? "cursor-not-allowed bg-gray-300"
-              : "bg-blue-500 hover:bg-blue-600",
-          )}
-        >
-          <span className="text-white text-lg">+</span>
-        </label>
+      
         <button
           className={clsx(
             "absolute inset-y-0 right-3 my-auto flex h-8 w-8 items-center justify-center rounded-md transition-all",
